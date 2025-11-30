@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇游戏</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>贪吃蛇游戏</h1>
+        <div class="game-info">
+            <div class="score">得分: <span id="score">0</span></div>
+            <div class="high-score">最高分: <span id="high-score">0</span></div>
+        </div>
+        <canvas id="game-canvas" width="400" height="400"></canvas>
+        <div class="controls">
+            <button id="start-btn">开始游戏</button>
+            <button id="pause-btn" disabled>暂停</button>
+            <button id="reset-btn">重新开始</button>
+        </div>
+        <div class="instructions">
+            <h3>操作说明：</h3>
+            <p>使用方向键或WASD控制蛇移动</p>
+            <p>吃到食物得分，撞墙或撞到自己游戏结束</p>
+        </div>
+    </div>
+    <script src="../js/game.js"></script>
+
+    <!-- 备用方案：如果服务器方式打不开，可以直接嵌入JS代码 -->
+    <script>
+        // 如果无法加载外部JS文件，使用内联版本
+        if (typeof initGame === 'undefined') {
+            alert('检测到文件加载问题，请确保所有文件都在同一目录下。\n\n建议使用 start_game.bat 文件启动游戏服务器。');
+        }
+    </script>
+</body>
+</html>
